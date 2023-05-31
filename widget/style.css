@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(128, 212, 212);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    margin-right: 30px;
+    width: 270px;
+    font-size: 20px;
+}
+
+input,
+select {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    border: none;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(88, 170, 205);
+}
+
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+p,
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.total {
+    background-color: rgb(88, 170, 205);
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberOfSingleTrips,
+.pricePerSingleTrip,
+.numberOfReturnTrips,
+.numberOfReturnTrips {
+    text-align: center;
+}
+
+.times {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.time {
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .column {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+
+
+  .times {
+    margin-bottom: 10px;
+  }

@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Bus Travel App</title>
 </head>
+
 <body>
-    
+    <h1><i class="fa fa-bus" style="font-size:30px"></i> Bus Travel App</h1>
+    <div class="form">
+        <label>Points:</label>
+        <input type="number" name="" value="" class="enteredPoints">
+    </div>
+    <div class="form">
+        <label>Location:</label>
+        <select class="dropDown">
+            <option value="selectTown">Select Location</option>
+            <option value="25">Dunoon</option>
+            <option value="40">Khayelitsha</option>
+            <option value="30">Mitchells Plain</option>
+        </select>
+    </div>
+    <h1>Travel times</h1>
+    <div class="row">
+        <div class="column center">
+            <div class="times centerDiv">
+                <input type="radio" name="time" id="peak" value="peak" class="time">
+                <label for="peak">Peak</label>
+            </div>
+            <div class="times centerDiv">
+                <input type="radio" name="time" id="offPeak" value="offPeak" class="time">
+                <label for="offPeak">Off peak</label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="center">
+                <input type="checkbox" id="my-checkbox" value="returnTripChecked" class="checkbox">
+                <label for="my-checkbox">Return Trip</label>
+            </div>
+        </div>
+    </div>
+    <div class="centerDiv">
+        <button type="button" id="calculateButton">Calculate</button>
+    </div>
+    <p>Calculations</p>
+    <div class="centerDiv">
+        <label for="numberOfSingleTrips">Number of single trips</label>
+        <div class="total"><span class="numberOfSingleTrips">0</span></div>
+    </div>
+    <div class="centerDiv container">
+        <label for="costPricePerApple">Price per trip (single)</label>
+        <div class="total">R<span class="pricePerSingleTrip">0.00</span></div>
+    </div>
+    <div class="centerDiv container">
+        <label for="numberOfReturnTrips">Number of return trips</label>
+        <div class="total"><span class="numberOfReturnTrips">0</span></div>
+    </div>
+    <div class="centerDiv container">
+        <label for="pricePerReturnTrip">Price per trip (return)</label>
+        <div class="total">R<span class="numberOfReturnTrips">0.00</span></div>
+    </div>
 </body>
 <script src="../factory-functions/busTravelFunction.js"></script>
 <script src="./busTravel.js"></script>
+
 </html>
