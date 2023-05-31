@@ -44,26 +44,18 @@ calculateButton.addEventListener("click", function () {
     var returnTrips = busTravelFunction.numberOfReturnTrips();
     var pricePerReturn = busTravelFunction.pricePerTripReturn();
 
-
-    numberOfSingleTrips.innerHTML = singleTrips;
-
-    pricePerSingleTrip.innerHTML = pricePerSingle;
-
-    if (checkboxElement.checked === true) {
+    if(checkboxElement.checked === false){
+        numberOfSingleTrips.innerHTML = singleTrips;
+        pricePerSingleTrip.innerHTML = pricePerSingle;
+    }else if (checkboxElement.checked === true) {
         numberOfReturnTrips.innerHTML = returnTrips;
-    }
-
-    if (checkboxElement.checked === true) {
         pricePerReturnTrip.innerHTML = pricePerReturn;
     }
-
     //unckeck
     season.forEach(option => {
         option.checked = false;
       })
-    //uncheck
-    checkboxElement.checked === true
-
+     
     //
     enteredPoints.value = ""
 
