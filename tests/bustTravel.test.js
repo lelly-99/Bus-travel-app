@@ -48,13 +48,29 @@ describe('Bus Travel App', function(){
 
         assert.equal(2 ,returnTrips.numberOfReturnTrips())
     })
-    it("should get number of single trips during offpeak", function(){
-        var singleTrips = busTravel()
+    it("should get number of return trips during offpeak", function(){
+        var returnTrips = busTravel()
 
-        singleTrips.getPoints(100)
-        singleTrips.getLocation("Dunoon")
-        singleTrips.peak("offPeak")
+        returnTrips.getPoints(100)
+        returnTrips.getLocation("Dunoon")
+        returnTrips.peak("offPeak")
 
-        assert.equal(2 ,singleTrips.numberOfReturnTrips())
+        assert.equal(2 ,returnTrips.numberOfReturnTrips())
+    })
+    it("should get price of return trips during offpeak", function(){
+        var returnTrips = busTravel()
+
+        returnTrips.getLocation("Dunoon")
+        returnTrips.peak("offPeak")
+
+        assert.equal(50 ,returnTrips.pricePerTripReturn())
+    })
+    it("should get price of return trips during offpeak", function(){
+        var returnTrips = busTravel()
+
+        returnTrips.getLocation("Dunoon")
+        returnTrips.peak("peak")
+
+        assert.equal(62.50 ,returnTrips.pricePerTripReturn())
     })
 })
