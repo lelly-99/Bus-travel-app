@@ -12,18 +12,19 @@
 <body>
     <h1><i class="fa fa-bus" style="font-size:30px"></i> Bus Travel App</h1>
     <div class="form">
-        <label>Points:</label>
-        <input type="number" name="" value="" class="enteredPoints">
+        <label for="enteredPoints">Points:</label>
+        <input type="number" name="enteredPoints" value="" class="enteredPoints" required id="enteredPoints">
     </div>
     <div class="form">
-        <label>Location:</label>
-        <select class="dropDown">
+        <label for="selectTown">Location:</label>
+        <select class="dropDown" id="selectTown">
             <option value="selectTown">Select Location</option>
             <option value="Dunoon">Dunoon</option>
             <option value="Khayelitsha">Khayelitsha</option>
             <option value="Mitchells">Mitchells Plain</option>
         </select>
     </div>
+    
     <h1>Travel times</h1>
     <div class="row">
         <div class="column center">
@@ -34,17 +35,17 @@
             <div class="times centerDiv">
                 <input type="radio" name="time" id="offPeak" value="offPeak" class="time">
                 <label for="offPeak">Off peak</label>
-            </div>
+            </div>            
         </div>
         <div class="column">
             <div class="center">
-                <input type="checkbox" id="my-checkbox" value="returnTripChecked" class="checkbox">
+                <input type="checkbox" id="my-checkbox" value="returnTripChecked" class="checkbox" name="checkbox">
                 <label for="my-checkbox">Return Trip</label>
-            </div>
+            </div>            
         </div>
     </div>
     <div class="centerDiv">
-        <button type="button" id="calculateButton">Calculate</button>
+        <button type="button" id="calculateButton" class="calculateButton">Calculate</button>
     </div>
     <p>Calculations</p>
     <div class="centerDiv">
@@ -61,10 +62,9 @@
     </div>
     <div class="centerDiv container">
         <label for="pricePerReturnTrip">Price per trip (return)</label>
-        <div class="total">R<span class="numberOfReturnTrips">0.00</span></div>
+        <div class="total">R<span class="pricePerReturnTrip">0.00</span></div>
     </div>
 </body>
 <script src="../factory-functions/busTravelFunction.js"></script>
-<script src="./busTravel.js"></script>
-
+<script src="../widget/busTravel.js"></script>
 </html>
