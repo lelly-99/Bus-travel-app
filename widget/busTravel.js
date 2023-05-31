@@ -56,6 +56,18 @@ calculateButton.addEventListener("click", function () {
     if (checkboxElement.checked === true) {
         pricePerReturnTrip.innerHTML = pricePerReturn;
     }
+
+    //unckeck
+    season.forEach(option => {
+        option.checked = false;
+      })
+    //uncheck
+    checkboxElement.checked === true
+
+    //
+    enteredPoints.value = ""
+
+    selectElement.value = "selectTown"
 })
 
 
